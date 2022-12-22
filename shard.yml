@@ -7,7 +7,7 @@ authors:
 
 description: Custom lambda runtime for Crystal
 
-license: MIT-0
+license: MIT
 
 dependencies:
   dotenv:
