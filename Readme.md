@@ -77,6 +77,21 @@ mine_train_run do |event, context|
 end
 ```
 
+## Building and deployment
+Taken from another project, use docker to build the bootstrap and upload the zipped file to your aws lambda function:
+
+Build the application
+```
+docker run --rm -it -v $PWD:/app -w /app crystallang/crystal:latest \
+  crystal build src/main.cr -o lib/mine_train/bootstrap/bootstrap \
+    --release --static --no-debug
+```
+
+Zip the deployable bootstrap
+```
+zip -j bootstrap.zip lib/mine_train/bootstrap/bootstrap
+```
+
 ## MineTrain::Lambda::Event
 The `MineTrain::Lambda::Event` type has two public methods:
 
