@@ -9,7 +9,7 @@ module MineTrain
       end
 
       def body : JSON::Any
-        JSON.parse(event.body)
+        JSON.parse(@event.body)
       end
 
       def raw : JSON::Any
