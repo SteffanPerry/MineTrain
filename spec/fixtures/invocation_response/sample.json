@@ -1,0 +1,12 @@
+{
+  "headers": {
+    "Lambda-Runtime-Aws-Request-Id": "8476a536-e9f4-11e8-9739-2dfe598c3fcd",
+    "Lambda-Runtime-Deadline-Ms": "1542409706888",
+    "Lambda-Runtime-Invoked-Function-Arn": "arn:aws:lambda:us-east-2:123456789012:function:custom-runtime",
+    "Lambda-Runtime-Trace-Id": "Root=1-5bef4de7-ad49b0e87f6ef6c87fc2e700;Parent=9a9197af755a6419;Sampled=1",
+    "Lambda-Runtime-Client-Context": "",
+    "Lambda-Runtime-Cognito-Identity": null
+  },
+  "body": "{\"foo\":\"bar\"}",
+  "isBase64Encoded": false
+}

@@ -1,0 +1,9 @@
+name: dotenv
+version: 0.5.0
+
+authors:
+  - drum445 <humdrum375@gmail.com>
+
+crystal: 1.0.0
+
+license: MIT
