@@ -22,7 +22,7 @@ Create a method that optionally accepts the mine-train event and context types:
 require "mine-train"
 
 class CustomClass
-  def self.perform(event : MineTrain::Lambda::Event, context :MineTrain::Lambda::Context)
+  def self.perform(event : MineTrain::Lambda::Event, context : MineTrain::Lambda::Context)
     # Do work...
   end
 end
@@ -46,7 +46,7 @@ You can use use event values within the `mine_train_run` block to dynamically ca
 require "mine-train"
 
 class CustomClass
-  def self.perform(event : MineTrain::Lambda::Event, context :MineTrain::Lambda::Context)
+  def self.perform(event : MineTrain::Lambda::Event, context : MineTrain::Lambda::Context)
     # Do work...
   end
 
