@@ -12,7 +12,7 @@ module MineTrain
         JSON.parse(@event.body)
       end
 
-      def raw : JSON::Any
+      def raw : HTTP::Client::Response
         @event
       end
     end
