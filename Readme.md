@@ -28,7 +28,7 @@ class CustomClass
 end
 ```
 
-In your entry file, require `mine-train` and pass a block with your method:
+In your entry file, require `mine-train` and pass a block to the `mine_train_run` method:
 
 ```
 require "mine-train"
