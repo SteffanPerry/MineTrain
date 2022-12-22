@@ -9,4 +9,3 @@ RUN mkdir /lambda-builder
 COPY builder/* /lambda-builder/.
 
 ENTRYPOINT ["crystal", "/lambda-builder/builder.cr"]
-
