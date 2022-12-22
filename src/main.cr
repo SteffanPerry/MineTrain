@@ -1,8 +1,8 @@
-require "./lambda_runtime"
-require "./event_handler"
+require "./mine_train/lambda_runtime"
+require "./mine_train/event_handler"
 
 lambda_event_loop do |event, context|
-  ::EventHandler
+  MineTrain::EventHandler
     .new(event, context)
     .process!
 end

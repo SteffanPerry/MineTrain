@@ -14,7 +14,6 @@ def exec(command)
 end
 
 puts "Start building binaries..."
-
 system("shards build --static --release")
 shard_yml = File.open("shard.yml") do |file|
   YAML.parse(file)

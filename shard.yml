@@ -11,7 +11,3 @@ license: MIT-0
 dependencies:
   dotenv:
     github: drum445/dotenv
-
-targets:
-  example:
-    main: src/example.cr

@@ -1,3 +1,5 @@
 docker run --rm -it -v $PWD:/app -w /app crystallang/crystal:latest \
-  crystal build src/bootstrap.cr -o bin/bootstrap \
+  crystal build src/main.cr -o bin/bootstrap \
     --release --static --no-debug
+
+zip -j bootstrap.zip bin/bootstrap
