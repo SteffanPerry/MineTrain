@@ -1,3 +1,6 @@
+# Warning
+This project is still in very early development stages, but should be complete enough to use in production. that being said, use this at your own risk.
+
 # MineTrain
 A lightweight and easy to use shard for running crystal in AWS Lambda
 

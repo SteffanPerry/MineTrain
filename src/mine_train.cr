@@ -9,40 +9,6 @@ module MineTrain
   API_VERSION     = "2018-06-01"
   INVOCATION_URL  = "http://#{ENV["AWS_LAMBDA_RUNTIME_API"]}/#{API_VERSION}/runtime"
 
-  # class_getter configuration = MineTrain::Configuration.new
-
-  # Configure Minetrain
-  #
-  # ```
-  # MineTrain.configure do |config|
-  #   config.entry_map = { "default":  -> { CustomClass.perform }, }
-  #   config.entry_method = -> (event, context){ "default" }
-  # end
-  # ```
-  #def self.configure(&block) : Nil
-  #  yield configuration
-  #end
-
-  #def self.entry_map
-  #  configuration.entry_map
-  #end
-
-  #def self.entry_method(event)
-  #  configuration.entry_method
-  #end
-
-  #def self.default_method(event, context)
-  #  "Hello from MineTrain"
-  #end
-
-  #class Configuration
-  #  property entry_method = -> (event) { "default" }
-
-  #  property entry_map = {
-  #    "default": -> (event, context) { MineTrain.default_method(event, context) }
-  #  }
-  #end
-
   def self.fetch_event : HTTP::Client::Response
     event = HTTP::Client.get("#{INVOCATION_URL}/invocation/next")
     raise "InvalidEvent" if event.nil?
