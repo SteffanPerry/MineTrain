@@ -9,20 +9,18 @@ module MineTrain
     end
 
     def process!
-      entry_map[entry_method].call
+      entry_map[entry_method].call(event, context)
     end
 
-    def entry_method
-      "default"
+    def entry_method(event)
+      ::MineTrain.entry_method(event)
     end
 
     def entry_map
-      { 
-        "default":  -> { MineTrain::EventHandler.default_method }
-      }
+      ::MineTrain.entry_method
     end
 
-    def self.default_method
+    def self.default_method(event, context)
       "Hello from MineTrain"
     end
   end

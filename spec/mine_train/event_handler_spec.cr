@@ -1,4 +1,4 @@
-require "./spec_helper.cr"
+require "../spec_helper.cr"
 
 raw_event = begin
   response_data = File.open("./spec/fixtures/invocation_response/sample.json") { |file| file.gets_to_end }
@@ -10,10 +10,10 @@ raw_event = begin
   HTTP::Client::Response.new(200, parsed_data["body"].to_s, headers)
 end
 
-event = ::Lambda::Event.new(raw_event)
-context = ::Lambda::Context.new(raw_event)
+event = MineTrain::Lambda::Event.new(raw_event)
+context = MineTrain::Lambda::Context.new(raw_event)
 
-describe EventHandler do
+describe MineTrain::EventHandler do
   describe "initialize" do
     it "assignes event" do
       instance = EventHandler.new(event, context)

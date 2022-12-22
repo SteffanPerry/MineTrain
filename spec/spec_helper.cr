@@ -3,7 +3,7 @@ require "dotenv"
 
 Dotenv.load(path: ".env.test")
 
-require "../src/main.cr"
+require "../src/mine_train.cr"
 
 def create_test_object(name)
   project = MyProject.new(option: false)

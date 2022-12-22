@@ -1,11 +1,12 @@
-name: minetrain
+name: mine_train
+
 version: 0.1.0
 
 authors:
   - Steffan Perry <sperry1988@gmail.com>
 
-description: |
-  Custom lambda runtime for Crystal
+description: Custom lambda runtime for Crystal
+
 license: MIT-0
 
 dependencies:
