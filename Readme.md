@@ -2,6 +2,9 @@
 This project is still in very early development stages, but should be complete enough to use in production. that being said, use this at your own risk.
 
 # MineTrain
+[![GitHub release](https://img.shields.io/github/release/SteffanPerry/MineTrain.svg)](https://github.com/SteffanPerry/MineTrain/releases)
+
+
 A lightweight and easy to use shard for running crystal in AWS Lambda
 
 MineTrain was heavily influenced by the following projects:
