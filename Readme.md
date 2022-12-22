@@ -22,10 +22,10 @@ dependencies:
 ```
 
 ## Usage
-Create a method that optionally accepts the mine-train event and context types:
+Create a method that optionally accepts the mine train event and context types:
 
 ```
-require "mine-train"
+require "mine_train"
 
 class CustomClass
   def self.perform(event : MineTrain::Lambda::Event, context : MineTrain::Lambda::Context)
@@ -34,10 +34,10 @@ class CustomClass
 end
 ```
 
-In your entry file, require `mine-train` and pass a block to the `mine_train_run` method:
+In your entry file, require `mine_train` and pass a block to the `mine_train_run` method:
 
 ```
-require "mine-train"
+require "mine_train"
 require "./custom_class.cr"
 
 mine_train_run do |event, context|
@@ -49,7 +49,7 @@ You can use use event values within the `mine_train_run` block to dynamically ca
 
 ```
 # custom_class.cr
-require "mine-train"
+require "mine_train"
 
 class CustomClass
   def self.perform(event : MineTrain::Lambda::Event, context : MineTrain::Lambda::Context)
@@ -68,7 +68,7 @@ end
 
 ```
 # main.cr
-require "mine-train"
+require "mine_train"
 require "./custom_class.cr"
 
 mine_train_run do |event, context|
