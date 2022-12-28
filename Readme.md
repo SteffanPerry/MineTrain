@@ -18,7 +18,7 @@ Add MineTrain to your crystal functions `shards.yml` file
 dependencies:
   mine_train:
     github: SteffanPerry/MineTrain
-    branch: master
+    version: 0.0.2
 ```
 
 ## Usage
