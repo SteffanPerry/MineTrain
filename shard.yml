@@ -1,6 +1,6 @@
 name: mine_train
 
-version: 0.0.1
+version: 0.0.2
 
 authors:
   - Steffan Perry <sperry1988@gmail.com>
@@ -9,6 +9,9 @@ description: Custom lambda runtime for Crystal
 
 license: MIT
 
-dependencies:
+development_dependencies:
   dotenv:
     github: drum445/dotenv
+  spectator:
+    gitlab: arctic-fox/spectator
+    version: 0.11.5

@@ -42,7 +42,6 @@ module MineTrain
 
       private def client_context
         ctx = @event.headers["Lambda-Runtime-Client-Context"]? || ""
-        puts "context: #{ctx.to_s}"
         return if ctx.to_s.blank?
 
         JSON.parse(ctx)

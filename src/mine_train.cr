@@ -1,9 +1,6 @@
 
-# require "./mine_train/event_handler"
 require "http/client"
-require "./mine_train/lambda/event.cr"
-require "./mine_train/lambda/context.cr"
-require "./mine_train/lambda_runtime.cr"
+require "./mine_train/**"
 
 module MineTrain
   API_VERSION     = "2018-06-01"
@@ -13,14 +10,8 @@ module MineTrain
     event = HTTP::Client.get("#{INVOCATION_URL}/invocation/next")
     raise "InvalidEvent" if event.nil?
     raise "unexpected response #{event.status_code}" unless event.status_code == 200
-  
+
     event
-  end
-  
-  def self.process!(event : MineTrain::Lambda::Event, context : MineTrain::Lambda::Context)
-    MineTrain::EventHandler
-      .new(event, context)
-      .process!
   end
   
   def self.send_response(event : HTTP::Client::Response, result)
@@ -39,7 +30,7 @@ module MineTrain
       "errorType": ex.cause,
       "stackTrace": ex.backtrace
     }.to_s
-  
+
     HTTP::Client.post("#{INVOCATION_URL}/init/error", body: data, headers: nil)
   end
 end
@@ -50,7 +41,7 @@ def mine_train_run
       fetched_event = MineTrain.fetch_event
       event         = MineTrain::Lambda::Event.new(fetched_event)
       context       = MineTrain::Lambda::Context.new(fetched_event)
-      
+
       result = yield(event, context)
 
       MineTrain.send_response(fetched_event, result)
