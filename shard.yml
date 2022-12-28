@@ -9,6 +9,9 @@ description: Custom lambda runtime for Crystal
 
 license: MIT
 
-dependencies:
+development_dependencies:
   dotenv:
     github: drum445/dotenv
+  spectator:
+    gitlab: arctic-fox/spectator
+    version: 0.11.5
