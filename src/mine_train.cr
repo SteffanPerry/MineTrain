@@ -1,6 +1,6 @@
 
 require "http/client"
-require "./mine_train/*"
+require "./mine_train/**"
 
 module MineTrain
   API_VERSION     = "2018-06-01"
